@@ -1,0 +1,47 @@
+$loading-dots-dot-size: 6px;
+$loading-dots-animation-duration: 0.7s;
+
+.loading-dots {
+ @extend .clearfix;
+  display: inline-block;
+}
+
+.loading-dots__dot {
+  float: left;
+  width: $loading-dots-dot-size;
+  height: $loading-dots-dot-size;
+  border-radius: $loading-dots-dot-size;
+  background: #ccc;
+  margin-right: 3px;
+}
+
+.loading-dots--animated {
+  .loading-dots__dot--1 {
+    @include animation('animate-dot-1 #{$loading-dots-animation-duration} infinite');
+  }
+  .loading-dots__dot--2 {
+    @include animation('animate-dot-2 #{$loading-dots-animation-duration} infinite');
+  }
+  .loading-dots__dot--3 {
+    @include animation('animate-dot-3 #{$loading-dots-animation-duration} infinite');
+  }
+}
+
+@include keyframes(animate-dot-1) {
+  0%     { opacity: 0.3; }
+  50%    { opacity: 1;   }
+  100%   { opacity: 0.3; }
+}
+
+@include keyframes(animate-dot-2) {
+  0%      { opacity: 0.8; }
+  25%     { opacity: 0.3; }
+  75%     { opacity: 1;   }
+  100%    { opacity: 0.8; }
+}
+
+@include keyframes(animate-dot-3) {
+  0%     { opacity: 1;   }
+  50%    { opacity: 0.3; }
+  100%   { opacity: 1;   }
+}
