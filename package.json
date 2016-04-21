@@ -1,6 +1,6 @@
 {
   "name": "react-loading-dots",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Three dots that animate loading action. Can be used in replacement of spinner.",
   "main": "./dist/LoadingDots.js",
   "repository" : {

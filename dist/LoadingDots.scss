@@ -1,5 +1,42 @@
 $loading-dots-dot-size: 6px;
 $loading-dots-animation-duration: 0.7s;
+@mixin loading-dots-vendor($prop, $val) {
+  -webkit-#{$prop}: #{$val};
+  -ms-#{$prop}: #{$val};
+  -moz-#{$prop}: #{$val};
+  -o-#{$prop}: #{$val};
+  #{$prop}: #{$val};
+}
+
+@mixin loading-dots-keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin loading-dots-animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+
+  @include loading-dots-vendor(animation, $animations);
+}
 
 .loading-dots {
  @extend .clearfix;
@@ -17,30 +54,30 @@ $loading-dots-animation-duration: 0.7s;
 
 .loading-dots--animated {
   .loading-dots__dot--1 {
-    @include animation('animate-dot-1 #{$loading-dots-animation-duration} infinite');
+    @include loading-dots-animation('animate-dot-1 #{$loading-dots-animation-duration} infinite');
   }
   .loading-dots__dot--2 {
-    @include animation('animate-dot-2 #{$loading-dots-animation-duration} infinite');
+    @include loading-dots-animation('animate-dot-2 #{$loading-dots-animation-duration} infinite');
   }
   .loading-dots__dot--3 {
-    @include animation('animate-dot-3 #{$loading-dots-animation-duration} infinite');
+    @include loading-dots-animation('animate-dot-3 #{$loading-dots-animation-duration} infinite');
   }
 }
 
-@include keyframes(animate-dot-1) {
+@include loading-dots-keyframes(animate-dot-1) {
   0%     { opacity: 0.3; }
   50%    { opacity: 1;   }
   100%   { opacity: 0.3; }
 }
 
-@include keyframes(animate-dot-2) {
+@include loading-dots-keyframes(animate-dot-2) {
   0%      { opacity: 0.8; }
   25%     { opacity: 0.3; }
   75%     { opacity: 1;   }
   100%    { opacity: 0.8; }
 }
 
-@include keyframes(animate-dot-3) {
+@include loading-dots-keyframes(animate-dot-3) {
   0%     { opacity: 1;   }
   50%    { opacity: 0.3; }
   100%   { opacity: 1;   }

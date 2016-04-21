@@ -1,0 +1,135 @@
+.loading-dots {
+  display: inline-block; }
+
+.loading-dots__dot {
+  float: left;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background: #ccc;
+  margin-right: 3px; }
+
+.loading-dots--animated .loading-dots__dot--1 {
+  -webkit-animation: animate-dot-1 0.7s infinite;
+  -ms-animation: animate-dot-1 0.7s infinite;
+  -moz-animation: animate-dot-1 0.7s infinite;
+  -o-animation: animate-dot-1 0.7s infinite;
+  animation: animate-dot-1 0.7s infinite; }
+
+.loading-dots--animated .loading-dots__dot--2 {
+  -webkit-animation: animate-dot-2 0.7s infinite;
+  -ms-animation: animate-dot-2 0.7s infinite;
+  -moz-animation: animate-dot-2 0.7s infinite;
+  -o-animation: animate-dot-2 0.7s infinite;
+  animation: animate-dot-2 0.7s infinite; }
+
+.loading-dots--animated .loading-dots__dot--3 {
+  -webkit-animation: animate-dot-3 0.7s infinite;
+  -ms-animation: animate-dot-3 0.7s infinite;
+  -moz-animation: animate-dot-3 0.7s infinite;
+  -o-animation: animate-dot-3 0.7s infinite;
+  animation: animate-dot-3 0.7s infinite; }
+
+@-webkit-keyframes animate-dot-1 {
+  0% {
+    opacity: 0.3; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.3; } }
+
+@-moz-keyframes animate-dot-1 {
+  0% {
+    opacity: 0.3; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.3; } }
+
+@-o-keyframes animate-dot-1 {
+  0% {
+    opacity: 0.3; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.3; } }
+
+@keyframes animate-dot-1 {
+  0% {
+    opacity: 0.3; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.3; } }
+
+@-webkit-keyframes animate-dot-2 {
+  0% {
+    opacity: 0.8; }
+  25% {
+    opacity: 0.3; }
+  75% {
+    opacity: 1; }
+  100% {
+    opacity: 0.8; } }
+
+@-moz-keyframes animate-dot-2 {
+  0% {
+    opacity: 0.8; }
+  25% {
+    opacity: 0.3; }
+  75% {
+    opacity: 1; }
+  100% {
+    opacity: 0.8; } }
+
+@-o-keyframes animate-dot-2 {
+  0% {
+    opacity: 0.8; }
+  25% {
+    opacity: 0.3; }
+  75% {
+    opacity: 1; }
+  100% {
+    opacity: 0.8; } }
+
+@keyframes animate-dot-2 {
+  0% {
+    opacity: 0.8; }
+  25% {
+    opacity: 0.3; }
+  75% {
+    opacity: 1; }
+  100% {
+    opacity: 0.8; } }
+
+@-webkit-keyframes animate-dot-3 {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.3; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes animate-dot-3 {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.3; }
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes animate-dot-3 {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.3; }
+  100% {
+    opacity: 1; } }
+
+@keyframes animate-dot-3 {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.3; }
+  100% {
+    opacity: 1; } }
